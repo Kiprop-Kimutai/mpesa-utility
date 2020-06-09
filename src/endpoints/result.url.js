@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 router.post('/', (req, res) => {
     console.log(req.body);
-    fs.appendFile(path.join('./endpoints/', 'result.txt'), JSON.stringify(req.body).concat('\n'), (err) => {
+    fs.appendFile(path.join('./src/endpoints/', 'result.txt'), JSON.stringify(req.body).concat('\n'), (err) => {
         if (err)
             console.error(err);
         console.log('Data written to file...');
